@@ -296,7 +296,201 @@
         }
     </style>
 </head>
-<body>
+<body> 
+<div id="premium-preloader">
+  <div class="preloader-content">
+    <div class="sunrise-glow"></div>
+    
+    <div class="logo-wrapper">
+      <img src="logoreveal.png" alt="Logo" class="preloader-logo">
+      <div class="light-sweep"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Prevent scrolling while preloader is active */
+  html, body.preloader-active {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  /* Step 1 & 3: Immediate Dark/Black Fullscreen Background */
+  #premium-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000; /* Instant black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999; /* Ensures it sits above absolutely everything */
+    opacity: 1;
+    visibility: visible;
+    /* Smooth 0.4s transition to the rich dark blue gradient */
+    animation: introBackground 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.6s;
+    will-change: opacity, visibility;
+  }
+
+  @keyframes introBackground {
+    to {
+      background: linear-gradient(135deg, #08111f 0%, #0b1220 50%, #101d33 100%);
+    }
+  }
+
+  .preloader-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px; /* Adjust based on your logo design size */
+    height: 300px;
+  }
+
+  /* Soft Golden Sunrise Glow */
+  .sunrise-glow {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.35) 0%, rgba(212, 175, 55, 0.08) 50%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.4);
+    /* Activates at 0.4s, expanding smoothly like morning light */
+    animation: sunriseExpand 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    animation-delay: 0.4s;
+    pointer-events: none;
+    will-change: transform, opacity;
+  }
+
+  @keyframes sunriseExpand {
+    to {
+      opacity: 1;
+      transform: scale(1.8);
+    }
+  }
+
+  /* Logo Wrapper & Subtle Floating Animation */
+  .logo-wrapper {
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    transform: scale(0.90);
+    /* 0.8s ultra-smooth Apple-like ease-in-out curve */
+    animation: 
+      logoFadeIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards,
+      subtleFloat 3s ease-in-out infinite alternate;
+    animation-delay: 0.4s, 1.2s; /* Float starts after fade-in finishes */
+    will-change: transform, opacity, filter;
+    overflow: hidden; /* Restricts the light sweep to the bounding box */
+  }
+
+  @keyframes logoFadeIn {
+    to {
+      opacity: 1;
+      transform: scale(1.0);
+    }
+  }
+
+  /* 2-3px Elegant Floating */
+  @keyframes subtleFloat {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-3px); }
+  }
+
+  .preloader-logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    backface-visibility: hidden;
+  }
+
+  /* Premium Golden Light Sweep (Shine Effect) */
+  .light-sweep {
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      to right, 
+      rgba(255, 215, 0, 0) 0%, 
+      rgba(255, 215, 0, 0.03) 10%,
+      rgba(255, 223, 128, 0.5) 50%, 
+      rgba(255, 215, 0, 0.03) 90%,
+      rgba(255, 215, 0, 0) 100%
+    );
+    transform: skewX(-25deg);
+    /* Moves across at 1.3s timeline mark */
+    animation: goldenSweep 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 1.3s;
+    pointer-events: none;
+    mix-blend-mode: overlay; /* Seamlessly blends into your PNG graphics */
+    will-change: transform;
+  }
+
+  @keyframes goldenSweep {
+    0% { left: -150%; }
+    100% { left: 150%; }
+  }
+
+  /* Brightening before reveal */
+  #premium-preloader.brighten .logo-wrapper {
+    filter: brightness(1.15);
+    transition: filter 0.4s ease-in-out;
+  }
+
+  /* Standard Website elements start hidden for a smooth fade-in reveal */
+  body > *:not(#premium-preloader) {
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  body.preloader-done > *:not(#premium-preloader) {
+    opacity: 1;
+  }
+</style>
+
+<script>
+  (function() {
+    // Lock scroll immediately
+    document.documentElement.classList.add('preloader-active');
+    document.body.classList.add('preloader-active');
+
+    window.addEventListener('DOMContentLoaded', function() {
+      const preloader = document.getElementById('premium-preloader');
+      const body = document.body;
+
+      if (!preloader) return;
+
+      // 1. At 2.2 seconds: Subtle brightening effect
+      setTimeout(() => {
+        preloader.classList.add('brighten');
+      }, 2200);
+
+      // 2. At 2.5 seconds: Initiate smooth Website Reveal Timeline
+      setTimeout(() => {
+        // Simultaneously fade out preloader and fade in homepage
+        preloader.style.opacity = '0';
+        preloader.style.visibility = 'hidden';
+        body.classList.add('preloader-done');
+        
+        // Unlock browser scrolling safely
+        document.documentElement.classList.remove('preloader-active');
+        body.classList.remove('preloader-active');
+
+        // 3. At 3.1 seconds (after fade finishes): Completely destroy from DOM
+        setTimeout(() => {
+          preloader.remove();
+        }, 600);
+
+      }, 2500); // 2.5s hold + 0.6s fadeout wrapper wraps it around 2.8s - 3.1s perfectly
+    });
+  })();
+</script>
 
     <nav>
         <div class="logo">সূচনা ছাত্র সংগঠন</div>
