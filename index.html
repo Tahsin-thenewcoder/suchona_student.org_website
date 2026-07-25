@@ -124,6 +124,36 @@
         /* FIX 1: Added missing .hero-btns CSS */
         .hero-btns { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 10px; }
 
+        /* Countdown timer — sits above the announcement box */
+        .hero-image { flex-direction: column; gap: 18px; }
+        .announcement-card { width: 100%; max-width: 400px; }
+        .countdown-container {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 18px 22px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+        .countdown-title {
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 14px;
+        }
+        .timer-box { display: flex; justify-content: center; gap: 10px; }
+        .timer-box > div {
+            background: linear-gradient(135deg, #009669, #10b981);
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 10px 6px;
+            min-width: 58px;
+            box-shadow: 0 6px 14px rgba(0,150,105,0.25);
+        }
+        .timer-box span { display: block; font-size: 1.4rem; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+        .timer-box small { display: block; font-size: 0.65rem; margin-top: 4px; opacity: 0.9; font-weight: 500; }
+
         .stats { display: flex; gap: 40px; margin-top: 40px; }
         .stat-item h3 { font-size: 1.5rem; color: var(--primary-color); }
 
@@ -307,7 +337,33 @@
     </div>
   </div>
 </div>
+<script>
+// ২৬শে সেপ্টেম্বর, ২০২৬ এর জন্য ডেট সেট
+const examDate = new Date("September 26, 2026 00:00:00").getTime();
 
+const timer = setInterval(function() {
+  const now = new Date().getTime();
+  const distance = examDate - now;
+
+  // দিন, ঘণ্টা, মিনিট ও সেকেন্ড গণনা
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // HTML এ মান দেখানো (বাংলা সংখ্যায় রূপান্তর করে নিলে আরও ভালো দেখাবে)
+  document.getElementById("days").innerText = days;
+  document.getElementById("hours").innerText = hours;
+  document.getElementById("minutes").innerText = minutes;
+  document.getElementById("seconds").innerText = seconds;
+
+  // সময় শেষ হলে
+  if (distance < 0) {
+    clearInterval(timer);
+    document.getElementById("countdown").innerHTML = "পরীক্ষা চলছে!";
+  }
+}, 1000);
+</script>
 <style>
   /* Prevent scrolling while preloader is active */
   html.preloader-active, body.preloader-active {
@@ -500,7 +556,9 @@
             <li><a href="#activities">কার্যক্রম</a></li>
             <li><a href="#team">নেতৃত্ব</a></li>
             <li><a href="#contact">যোগাযোগ</a></li>
-            <li><a href="#" class="btn-join">N/A</a></li>
+            <li><a href="https://drive.google.com/drive/folders/1QeRvTFSeR18LlVLD0I3jH5aR-6fN-GCX?usp=sharing" target="_blank" class="nav-btn">
+    Drive <!-- বা আপনার পছন্দের যেকোনো টেক্সট -->
+</a></li>
         </ul>
     </nav>
 
@@ -527,13 +585,25 @@
             </div>
         </div>
         <div class="hero-image">
+            <div class="announcement-card">
+              <!-- টাইমার সেকশন -->
+              <div class="countdown-container">
+                <span class="countdown-title">⏳ পরীক্ষার আর মাত্র বাকি:</span>
+                <div id="countdown" class="timer-box">
+                  <div><span id="days">00</span><small>দিন</small></div>
+                  <div><span id="hours">00</span><small>ঘণ্টা</small></div>
+                  <div><span id="minutes">00</span><small>মিনিট</small></div>
+                  <div><span id="seconds">00</span><small>সেকেন্ড</small></div>
+                </div>
+              </div>
+            </div>
             <div class="notice-box-wrapper">
                 <div class="notice-box-content">
                     <div style="font-size: 40px; color: #009669; margin-bottom: 15px;"><i class="fas fa-bullhorn"></i></div>
                     <h3>বিশেষ ঘোষণা <span class="notice-badge">নতুন</span></h3>
                     <p>আগামী ২৬শে সেপ্টেম্বর '৪র্থ বাংলা উৎসব ১৪৩৩ বঙ্গাব্দ'র তারিখ নির্ধারিত হয়েছে। নিয়মিত আপডেট পেতে চোখ রাখুন আমাদের ফেসবুক পেজএ।</p>
                     <div style="margin-top: 20px;">
-                        <a href="#" style="background: #009669; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block;">→</a>
+                        <a href="#" style="background: #009669; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block;">৪র্থ বাংলা উৎসব এর সিলেবাস ও নির্দেশিকা দেখতে উপরে ড্রাইভে ক্লিক করুন।</a>
                     </div>
                 </div>
             </div>
