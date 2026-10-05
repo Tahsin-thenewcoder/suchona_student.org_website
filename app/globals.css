@@ -1,4 +1,6 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500;600;700;800&display=swap");
+* 
+{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -20,10 +22,9 @@ html {
 body {
   background: var(--bg);
   color: var(--dark);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Anek Bangla", sans-serif;
   overflow-x: hidden;
 }
-
 a {
   color: inherit;
   text-decoration: none;
@@ -4983,5 +4984,1102 @@ body { line-height: 1.55; }
   .notice-moving-text {
     animation: none;
     padding-left: 0;
+  }
+}
+/* =========================================================
+   HOME NAVBAR + MOBILE MENU + HERO MOBILE FIX
+   Keep this block at the VERY END of globals.css
+========================================================= */
+
+/* ---------- MOBILE MENU: DEFAULT / DESKTOP ---------- */
+
+.mobileMenuButton {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+
+  position: relative;
+  z-index: 1002;
+
+  flex-shrink: 0;
+
+  background: transparent;
+  border: 1px solid #dfe7e3;
+  border-radius: 12px;
+
+  cursor: pointer;
+}
+
+.mobileMenuButton span {
+  width: 19px;
+  height: 2px;
+
+  position: absolute;
+  left: 50%;
+
+  background: var(--dark);
+  border-radius: 20px;
+
+  transform: translateX(-50%);
+  transition:
+    transform 0.25s ease,
+    top 0.25s ease,
+    opacity 0.2s ease;
+}
+
+.mobileMenuButton span:nth-child(1) {
+  top: 14px;
+}
+
+.mobileMenuButton span:nth-child(2) {
+  top: 20px;
+}
+
+.mobileMenuButton span:nth-child(3) {
+  top: 26px;
+}
+
+/* hamburger -> X */
+
+.mobileMenuButton.active span:nth-child(1) {
+  top: 20px;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.mobileMenuButton.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobileMenuButton.active span:nth-child(3) {
+  top: 20px;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+
+/* menu is completely hidden on desktop */
+
+.mobileMenu {
+  display: none;
+}
+
+
+/* =========================================================
+   TABLET + MOBILE NAVBAR
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  /* old desktop links */
+  .navLinks {
+    display: none;
+  }
+
+  /* old contact button */
+  .navButton {
+    display: none;
+  }
+
+  /* show hamburger */
+  .mobileMenuButton {
+    display: block;
+  }
+
+
+  /* ---------- DROPDOWN ---------- */
+
+  .mobileMenu {
+    display: block;
+
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+
+    padding: 10px 5% 22px;
+
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom: 1px solid var(--border);
+
+    box-shadow: 0 20px 45px rgba(15, 45, 35, 0.09);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(-12px);
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s ease;
+  }
+
+  .mobileMenu.mobileMenuOpen {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateY(0);
+  }
+
+
+  /* ---------- MENU LINKS ---------- */
+
+  .mobileMenuLinks {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobileMenuLinks > a {
+    min-height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 4px;
+
+    border-bottom: 1px solid #edf1ef;
+
+    color: var(--dark);
+
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .mobileMenuLinks > a b {
+    font-size: 15px;
+    font-weight: 400;
+
+    transition: transform 0.2s ease;
+  }
+
+  .mobileMenuLinks > a:hover {
+    color: var(--green);
+  }
+
+  .mobileMenuLinks > a:hover b {
+    transform: translateX(3px);
+  }
+
+
+  /* contact item */
+
+  .mobileMenuLinks .mobileContactLink {
+    min-height: 50px;
+
+    margin-top: 14px;
+    padding: 0 17px;
+
+    background: var(--dark);
+    color: white;
+
+    border: 0;
+    border-radius: 10px;
+  }
+
+  .mobileMenuLinks .mobileContactLink:hover {
+    color: white;
+    background: var(--green);
+  }
+
+
+  /* little bottom text */
+
+  .mobileMenuBottom {
+    margin-top: 19px;
+    padding-top: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid #edf1ef;
+  }
+
+  .mobileMenuBottom span {
+    color: var(--dark-green);
+
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  .mobileMenuBottom p {
+    color: #8b9791;
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   PHONE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  /* ---------- NAVBAR ---------- */
+
+  .navbar {
+    height: 72px;
+    padding: 0 5%;
+    gap: 12px;
+  }
+
+  .brand {
+    min-width: 0;
+    gap: 9px;
+  }
+
+  .logo {
+    width: 39px;
+    height: 39px;
+    flex-shrink: 0;
+  }
+
+  .brandText {
+    min-width: 0;
+  }
+
+  .brandText strong {
+    font-size: 14px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .brandText span {
+    display: none;
+  }
+
+  .mobileMenuButton {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+  }
+
+
+  /* ---------- MOBILE MENU ---------- */
+
+  .mobileMenu {
+    padding: 8px 5% 20px;
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
+  }
+
+  .mobileMenuLinks > a {
+    min-height: 51px;
+    font-size: 13px;
+  }
+
+
+  /* =====================================================
+     HERO FIX
+  ===================================================== */
+
+  .hero {
+    min-height: auto;
+
+    padding:
+      48px
+      5%
+      58px;
+
+    grid-template-columns: 1fr;
+
+    /* enough separation between text and image */
+    gap: 65px;
+
+    overflow: visible;
+  }
+
+  .heroLeft {
+    min-width: 0;
+  }
+
+  .heroLabel {
+    max-width: 100%;
+
+    margin-bottom: 24px;
+
+    font-size: 9px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+  }
+
+  .heroLeft h1 {
+    font-size: clamp(48px, 15vw, 64px);
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+
+  .heroDescription {
+    margin-top: 22px;
+
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .heroButtons {
+    margin-top: 27px;
+  }
+
+  .since {
+    margin-top: 28px;
+  }
+
+
+  /* ---------- HERO IMAGE CONTAINER ---------- */
+
+  .heroRight {
+    width: 100%;
+
+    /*
+      IMPORTANT:
+      old CSS had heroRight = 390px
+      while photoCard = 520px.
+      That caused the overlap.
+    */
+    height: auto !important;
+    min-height: 0 !important;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+
+    overflow: visible;
+  }
+
+
+  /* ---------- IMAGE CARD ---------- */
+
+  .heroRight .photoCard {
+    position: relative !important;
+
+    inset: auto !important;
+
+    width: 100% !important;
+    height: auto !important;
+
+    /* controls the real mobile image height */
+    aspect-ratio: 4 / 5;
+
+    margin: 0 !important;
+
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .heroPhoto {
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .greenShape {
+    display: none;
+  }
+
+
+  /* ---------- IMAGE CONTENT ---------- */
+
+  .photoBadge {
+    top: 16px;
+    left: 16px;
+
+    padding: 7px 11px !important;
+
+    font-size: 10px !important;
+  }
+
+  .photoContent {
+    left: 20px;
+    right: 20px;
+    bottom: 22px;
+  }
+
+  .photoContent p {
+    font-size: 11px !important;
+  }
+
+  .photoContent h2 {
+    font-size: 38px !important;
+    line-height: 1.08;
+  }
+
+  .photoContent a {
+    margin-top: 14px;
+  }
+
+
+  /* ---------- FLOATING 2019 CARD ---------- */
+
+  .yearCard {
+    left: 12px;
+    top: -29px;
+
+    width: 118px;
+
+    padding: 13px;
+
+    transform: none !important;
+
+    border-radius: 14px;
+  }
+
+  .yearCard strong {
+    font-size: 24px;
+  }
+
+
+  /* ---------- "4 টি আয়োজন" CARD ---------- */
+
+  .editionCard {
+    right: 12px;
+    bottom: -27px;
+
+    padding: 11px 14px;
+
+    transform: none !important;
+
+    border-radius: 13px;
+  }
+
+  .editionCard > strong {
+    font-size: 27px;
+  }
+
+
+  /*
+    editionCard extends below the photo by ~27px.
+    Reserve real layout space for it so STATS cannot
+    move underneath the floating card.
+  */
+
+  .heroRight {
+    padding-bottom: 35px;
+  }
+
+
+  /* ---------- STATS / OUR JOURNEY ---------- */
+
+  .stats {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 5%;
+    padding-top: 30px;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: var(--bg);
+  }
+
+  .statsIntro {
+    grid-column: 1 / -1;
+
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .brandText strong {
+    font-size: 13px;
+  }
+
+  .mobileMenuButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero {
+    padding-top: 42px;
+    gap: 60px;
+  }
+
+  .heroLeft h1 {
+    font-size: 50px;
+  }
+
+  .heroRight .photoCard {
+    aspect-ratio: 4 / 5.15;
+  }
+
+  .yearCard {
+    left: 8px;
+    width: 110px;
+  }
+
+  .editionCard {
+    right: 8px;
+  }
+}
+@media (max-width: 650px) {
+  .photoBadge {
+    top: 16px !important;
+    left: auto !important;
+    right: 14px !important;
+  }
+}
+@media (max-width: 650px) {
+  .heroRight .photoContent {
+    display: none !important;
+  }
+}
+/* ===== ACTIVITIES MOBILE FINAL FIX ===== */
+
+@media (max-width: 700px) {
+  .activitiesSection {
+    overflow: hidden;
+  }
+
+  .activityGrid {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+
+    gap: 16px !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .activityFeatured,
+  .activityCard {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    grid-column: 1 !important;
+  }
+
+  .activityFeatured {
+    min-height: 430px !important;
+  }
+
+  .activityImageWrap {
+    width: 100% !important;
+    min-height: 430px !important;
+  }
+
+  .activityCard {
+    min-height: 360px !important;
+  }
+}
+/* ===== BANGLA TYPOGRAPHY ===== */
+
+.heroLeft h1,
+.aboutHeading h2,
+.activitiesHeader h2,
+.membersHead h2,
+.gallery-preview-head h2,
+.join-inner h2,
+.contact-heading h2 {
+  font-family: "Anek Bangla", sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: -1px !important;
+}
+/* ===== MEMBERS PREVIEW MOBILE ===== */
+@media (max-width: 650px) {
+  .membersPreview .memberPhoto {
+    position: relative !important;
+    width: 100% !important;
+    height: 280px !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    border-radius: 18px !important;
+  }
+
+  .membersPreview .memberImage {
+    object-fit: cover !important;
+    object-position: center 25% !important;
+  }
+}
+/* ===== LATEST NOTICE — MOBILE FIX ===== */
+@media (max-width: 650px) {
+  .latest-notice {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .latest-notice-inner {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 78px !important;
+
+    padding: 12px 16px !important;
+
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+
+    overflow: visible !important;
+  }
+
+  .notice-badge {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+
+    padding: 9px 11px !important;
+    font-size: 13px !important;
+  }
+
+  .notice-track {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    width: auto !important;
+
+    overflow: visible !important;
+  }
+
+  .notice-track p {
+    position: static !important;
+    width: 100% !important;
+    margin: 2px 0 0 !important;
+
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+
+    animation: none !important;
+    transform: none !important;
+  }
+}
+/* ==================================================
+   BANGLA UTSOB NAVIGATION
+================================================== */
+
+.utsobNavLinks {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.utsobNavLinks a {
+  position: relative;
+  color: #24322d;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.utsobNavLinks a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 2px;
+
+  background: #07875f;
+  transition: width 0.25s ease;
+}
+
+.utsobNavLinks a:hover {
+  color: #07875f;
+}
+
+.utsobNavLinks a:hover::after {
+  width: 100%;
+}
+
+
+/* ---------- MOBILE BUTTON ---------- */
+
+.utsobMenuButton {
+  display: none;
+  width: 44px;
+  height: 44px;
+
+  border: 1px solid #dce5e1;
+  border-radius: 12px;
+  background: #fff;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+
+  cursor: pointer;
+  z-index: 1002;
+}
+
+.utsobMenuButton span {
+  width: 20px;
+  height: 2px;
+  background: #102a21;
+  border-radius: 10px;
+
+  transition: 0.25s ease;
+}
+
+.utsobMenuButton.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.utsobMenuButton.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.utsobMenuButton.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* ---------- MOBILE MENU ---------- */
+
+.utsobMobileMenu {
+  display: none;
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 1000px) {
+
+  .utsobNav {
+    position: sticky !important;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .utsobNavLinks,
+  .utsobNav > .backHome {
+    display: none !important;
+  }
+
+  .utsobMenuButton {
+    display: flex;
+  }
+
+  .utsobMobileMenu {
+    display: block;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    padding: 22px 22px 26px;
+
+    background: rgba(255, 255, 255, 0.98);
+    border-top: 1px solid #edf1ef;
+    box-shadow: 0 20px 40px rgba(10, 35, 27, 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(-10px);
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s ease;
+  }
+
+  .utsobMobileMenu.utsobMobileMenuOpen {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .utsobMobileMenuTitle {
+    padding-bottom: 17px;
+    border-bottom: 1px solid #e7ece9;
+  }
+
+  .utsobMobileMenuTitle span {
+    display: block;
+
+    color: #087b59;
+    font-size: 19px;
+    font-weight: 800;
+  }
+
+  .utsobMobileMenuTitle small {
+    display: block;
+    margin-top: 2px;
+
+    color: #89958f;
+    font-size: 12px;
+  }
+
+  .utsobMobileMenu nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .utsobMobileMenu nav a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 2px;
+
+    color: #13251f;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 650;
+
+    border-bottom: 1px solid #edf0ee;
+  }
+
+  .utsobMobileMenu nav a b {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .utsobMobileHome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 18px;
+    padding: 13px 16px;
+
+    background: #102a21;
+    color: #fff !important;
+
+    border-radius: 11px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 650;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .utsobNav {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .utsobBrand img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .utsobBrand strong {
+    font-size: 15px;
+  }
+
+  .utsobBrand span {
+    font-size: 10px;
+  }
+
+  .utsobMobileMenu {
+    padding: 20px 18px 24px;
+  }
+}
+/* =========================================
+   BANGLA UTSOB — IMPORTANT NOTICE
+========================================= */
+
+.utsobImportantNotice {
+  width: 100%;
+  padding: 28px 6%;
+  background: #fff;
+}
+
+.utsobNoticeInner {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  padding: 22px 26px;
+
+  background:
+    linear-gradient(100deg, #f2faf6 0%, #fffaf0 100%);
+
+  border: 1px solid #dcebe4;
+  border-left: 5px solid #07875f;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 30px rgba(17, 55, 42, 0.06);
+}
+
+
+/* ICON */
+
+.utsobNoticeIcon {
+  flex: 0 0 auto;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #07875f;
+  color: #fff;
+
+  font-size: 22px;
+  font-weight: 800;
+}
+
+
+/* CONTENT */
+
+.utsobNoticeContent {
+  flex: 1;
+}
+
+.utsobNoticeTop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 6px;
+}
+
+.utsobNoticeBadge {
+  padding: 5px 10px;
+
+  background: #dff3e9;
+  color: #087452;
+
+  border-radius: 100px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.utsobNoticeDate {
+  color: #87948e;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.utsobNoticeContent h3 {
+  margin: 0;
+
+  color: #102a21;
+
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.utsobNoticeContent p {
+  margin: 5px 0 0;
+
+  color: #66746e;
+
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+
+/* BUTTON */
+
+.utsobNoticeButton {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 13px 18px;
+
+  background: #102a21;
+  color: #fff;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: 0.25s ease;
+}
+
+.utsobNoticeButton:hover {
+  background: #07875f;
+  transform: translateY(-2px);
+}
+
+.utsobNoticeButton span {
+  font-size: 16px;
+}
+
+
+/* ============ MOBILE ============ */
+
+@media (max-width: 700px) {
+
+  .utsobImportantNotice {
+    padding: 16px 18px 5px;
+  }
+
+  .utsobNoticeInner {
+    position: relative;
+
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 13px;
+
+    padding: 19px;
+
+    border-radius: 15px;
+  }
+
+  .utsobNoticeIcon {
+    width: 38px;
+    height: 38px;
+
+    font-size: 17px;
+  }
+
+  .utsobNoticeTop {
+    flex-wrap: wrap;
+  }
+
+  .utsobNoticeContent h3 {
+    font-size: 18px;
+  }
+
+  .utsobNoticeContent p {
+    font-size: 13px;
+  }
+
+  .utsobNoticeButton {
+    width: 100%;
+
+    justify-content: space-between;
+
+    padding: 12px 15px;
   }
 }

@@ -9,42 +9,108 @@ declare global {
 }
 import Image from "next/image";
 import Link from "next/link";
-
+import { useState } from "react";
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+const closeMenu = () => setMenuOpen(false);
   return (
     <main>
       {/* NAVBAR */}
-      <header className="navbar">
-        <Link href="/" className="brand">
-          <Image
-            src="/logo.png"
-            alt="সূচনা ছাত্র সংগঠন"
-            width={48}
-            height={48}
-            className="logo"
-            priority
-          />
+<header className="navbar">
+  <Link href="/" className="brand" onClick={closeMenu}>
+    <Image
+      src="/logo.png"
+      alt="সূচনা ছাত্র সংগঠন"
+      width={48}
+      height={48}
+      className="logo"
+      priority
+    />
 
-          <div className="brandText">
-            <strong>সূচনা ছাত্র সংগঠন</strong>
-            <span>ভালো কিছু শুরু হোক</span>
-          </div>
-        </Link>
+    <div className="brandText">
+      <strong>সূচনা ছাত্র সংগঠন</strong>
+      <span>ভালো কিছু শুরু হোক</span>
+    </div>
+  </Link>
 
-        <nav className="navLinks">
-          <a href="#home">হোম</a>
-          <a href="#about">আমাদের সম্পর্কে</a>
-          <a href="#activities">কার্যক্রম</a>
-          <Link href="/bangla-utsob">বাংলা উৎসব</Link>
-          <Link href="/members">সদস্যবৃন্দ</Link>
-          <a href="#gallery">গ্যালারি</a>
-        </nav>
+  {/* DESKTOP NAVIGATION */}
+  <nav className="navLinks">
+    <a href="#home">হোম</a>
+    <a href="#about">আমাদের সম্পর্কে</a>
+    <a href="#activities">কার্যক্রম</a>
+    <Link href="/bangla-utsob">বাংলা উৎসব</Link>
+    <Link href="/members">সদস্যবৃন্দ</Link>
+    <a href="#gallery">গ্যালারি</a>
+  </nav>
 
-        <a href="#contact" className="navButton">
-          যোগাযোগ <span>↗</span>
-        </a>
-      </header>
+  <a href="#contact" className="navButton">
+    যোগাযোগ <span>↗</span>
+  </a>
+
+  {/* MOBILE HAMBURGER */}
+  <button
+    type="button"
+    className={`mobileMenuButton ${menuOpen ? "active" : ""}`}
+    onClick={() => setMenuOpen((prev) => !prev)}
+    aria-label={menuOpen ? "মেনু বন্ধ করুন" : "মেনু খুলুন"}
+    aria-expanded={menuOpen}
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  {/* MOBILE MENU */}
+  <div className={`mobileMenu ${menuOpen ? "mobileMenuOpen" : ""}`}>
+    <nav className="mobileMenuLinks">
+      <a href="#home" onClick={closeMenu}>
+        <span>হোম</span>
+        <b>→</b>
+      </a>
+
+      <a href="#about" onClick={closeMenu}>
+        <span>আমাদের সম্পর্কে</span>
+        <b>→</b>
+      </a>
+
+      <a href="#activities" onClick={closeMenu}>
+        <span>কার্যক্রম</span>
+        <b>→</b>
+      </a>
+
+      <Link href="/bangla-utsob" onClick={closeMenu}>
+        <span>বাংলা উৎসব</span>
+        <b>↗</b>
+      </Link>
+
+      <Link href="/members" onClick={closeMenu}>
+        <span>সদস্যবৃন্দ</span>
+        <b>↗</b>
+      </Link>
+
+      <a href="#gallery" onClick={closeMenu}>
+        <span>গ্যালারি</span>
+        <b>→</b>
+      </a>
+
+      <a
+        href="#contact"
+        className="mobileContactLink"
+        onClick={closeMenu}
+      >
+        <span>যোগাযোগ</span>
+        <b>↗</b>
+      </a>
+    </nav>
+
+    <div className="mobileMenuBottom">
+      <span>সূচনা ছাত্র সংগঠন</span>
+      <p>ভালো কিছু শুরু হোক</p>
+    </div>
+  </div>
+</header>
    {/* LATEST NOTICE */}
 <section className="latest-notice">
   <div className="latest-notice-inner">
@@ -54,10 +120,9 @@ export default function Home() {
     </div>
 
     <div className="notice-track">
-      <p className="notice-moving-text">
-         ‘৪র্থ বাংলা উৎসব
-        ১৪৩৩ বঙ্গাব্দ’-এর পর্দা নামল।
-      </p>
+      <p>
+  ‘৪র্থ বাংলা উৎসব ১৪৩৩ বঙ্গাব্দ’-এর পর্দা নামল।
+</p>
     </div>
   </div>
 </section>

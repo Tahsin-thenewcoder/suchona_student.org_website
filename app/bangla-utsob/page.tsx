@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,31 +35,133 @@ const editions = [
 ];
 
 export default function BanglaUtsobPage() {
+  const [utsobMenuOpen, setUtsobMenuOpen] = useState(false);
+
+const closeUtsobMenu = () => setUtsobMenuOpen(false);
   return (
     <main className="utsobPage">
 
       {/* ================= TOP BAR ================= */}
-      <header className="utsobNav">
-        <Link href="/" className="utsobBrand">
-          <Image
-            src="/logo.png"
-            alt="সূচনা ছাত্র সংগঠন"
-            width={44}
-            height={44}
-          />
+<header className="utsobNav">
+  <Link href="/" className="utsobBrand">
+    <Image
+      src="/logo.png"
+      alt="সূচনা ছাত্র সংগঠন"
+      width={44}
+      height={44}
+    />
 
-          <div>
-            <strong>সূচনা ছাত্র সংগঠন</strong>
-            <span>ভালো কিছু শুরু হোক</span>
-          </div>
-        </Link>
+    <div>
+      <strong>সূচনা ছাত্র সংগঠন</strong>
+      <span>ভালো কিছু শুরু হোক</span>
+    </div>
+  </Link>
 
-        <Link href="/" className="backHome">
-          <span>←</span>
-          মূল পাতায় ফিরুন
-        </Link>
-      </header>
+  {/* DESKTOP NAV */}
+  <nav className="utsobNavLinks">
+    <Link href="#notice">নোটিশ</Link>
+    <Link href="#syllabus">সিলেবাস</Link>
+    <Link href="#questions">বিগত বছরের প্রশ্ন</Link>
+    <Link href="#mock-test">মক টেস্ট</Link>
+    <Link href="#editions">আয়োজনসমূহ</Link>
+  </nav>
 
+  <Link href="/" className="backHome">
+    <span>←</span>
+    মূল পাতায় ফিরুন
+  </Link>
+
+  {/* MOBILE BUTTON */}
+  <button
+    className={`utsobMenuButton ${utsobMenuOpen ? "active" : ""}`}
+    onClick={() => setUtsobMenuOpen(!utsobMenuOpen)}
+    aria-label="মেনু"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  {/* MOBILE MENU */}
+  <div
+    className={`utsobMobileMenu ${
+      utsobMenuOpen ? "utsobMobileMenuOpen" : ""
+    }`}
+  >
+    <div className="utsobMobileMenuTitle">
+      <span>বাংলা উৎসব</span>
+      <small>প্রতিযোগীদের প্রয়োজনীয় তথ্য</small>
+    </div>
+
+    <nav>
+      <Link href="#notice" onClick={closeUtsobMenu}>
+        <span>নোটিশ</span>
+        <b>→</b>
+      </Link>
+
+      <Link href="#syllabus" onClick={closeUtsobMenu}>
+        <span>সিলেবাস</span>
+        <b>→</b>
+      </Link>
+
+      <Link href="#questions" onClick={closeUtsobMenu}>
+        <span>বিগত বছরের প্রশ্ন</span>
+        <b>→</b>
+      </Link>
+
+      <Link href="#mock-test" onClick={closeUtsobMenu}>
+        <span>মক টেস্ট</span>
+        <b>↗</b>
+      </Link>
+
+      <Link href="#editions" onClick={closeUtsobMenu}>
+        <span>আয়োজনসমূহ</span>
+        <b>↓</b>
+      </Link>
+    </nav>
+
+    <Link
+      href="/"
+      className="utsobMobileHome"
+      onClick={closeUtsobMenu}
+    >
+      ← মূল পাতায় ফিরুন
+    </Link>
+  </div>
+</header>
+{/* ================= IMPORTANT NOTICE ================= */}
+<section className="utsobImportantNotice" id="notice">
+  <div className="utsobNoticeInner">
+
+    <div className="utsobNoticeIcon">
+      <span>!</span>
+    </div>
+
+    <div className="utsobNoticeContent">
+      <div className="utsobNoticeTop">
+        <span className="utsobNoticeBadge">ফলাফল প্রকাশিত</span>
+        <span className="utsobNoticeDate">৪র্থ বাংলা উৎসব ১৪৩৩</span>
+      </div>
+
+      <h3>৪র্থ বাংলা উৎসবের ফলাফল প্রকাশ করা হয়েছে</h3>
+
+      <p>
+        প্রতিযোগিতার ফলাফল দেখতে আমাদের ফেসবুক পেজের ফলাফল পোস্টটি দেখুন।
+      </p>
+    </div>
+
+    <a
+      href="https://m.facebook.com/story.php?story_fbid=pfbid0jzZyddrzg8TYbUSrZGvL2LyeBsjamyzjR9mjrpvKQKubxYYasW9wHffEANpgUuSQl&id=61578114187247&mibextid=Nif5oz"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="utsobNoticeButton"
+    >
+      ফলাফল দেখুন
+      <span>↗</span>
+    </a>
+
+  </div>
+</section>
 
       {/* ================= HERO ================= */}
       <section className="utsobHero">
