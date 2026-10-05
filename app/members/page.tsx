@@ -5,7 +5,7 @@ const members = [
   {
     name: "সালমান মাহমুদ তাহসিন",
     role: "উপদেষ্টা",
-    image: "/members/advisor.jpg",
+    image: "/members/advisor.2.jpg",
   },
   {
     name: "মোনতাসিরুল ইসলাম জিহান",
@@ -24,8 +24,8 @@ const members = [
   },
   {
     name: "হাবিবুল মোস্তফা",
-    role: "প্রচার ও প্রকাশনা",
-    image: "/members/prochar.jpg",
+    role: "প্রচার সম্পাদক",
+    image: "/members/prochar.jpeg",
   },
 
   // ↓ বাকিদের এখান থেকে add করবি
@@ -33,7 +33,7 @@ const members = [
   {
     name: "আহমদ উল্লাহ",
     role: "সদস্য ও সাবেক সভাপতি",
-    image: "/members/member-01.jpg",
+    image: "/members/member-01.jpeg",
   },
   {
     name: "আরশেদুল ইসলাম শাকিল",
@@ -48,13 +48,13 @@ const members = [
   {
     name: "মোহাম্মদ নেজাম উদ্দিন",
     role: "সদস্য ও সাবেক প্রচার সম্পাদক",
-    image: "/members/member-04.jpg",
+    image: "/members/member-04.1.jpeg",
   },
   
   {
     name: "ইয়াছিন আরফাত আব্দুল্লাহ",
     role: "সদস্য",
-    image: "/members/member-05.jpg",
+    image: "/members/member-05.1.jpeg",
   },
 
   {
@@ -75,7 +75,7 @@ const members = [
   {
     name: "ইসফাতুল ইসলাম আসিফ",
     role: "সদস্য",
-    image: "/members/member-09.jpg",
+    image: "/members/member-09.1.jpeg",
   },
   {
     name: "ইয়াছিন আরফাত",
@@ -100,7 +100,7 @@ const members = [
   {
     name: "হুমায়ুন কবির তুহিন",
     role: "সদস্য",
-    image: "/members/member-13.jpg",
+    image: "/members/member-13.jpeg",
   },
   {
     name: "মোহাম্মদ মুবিন",
@@ -120,7 +120,7 @@ const members = [
   {
     name: "শহিদুল ইসলাম",
     role: "সদস্য",
-    image: "/members/member-17.jpg",
+    image: "/members/member-17.1.jpeg",
   },
 
   {
@@ -132,7 +132,7 @@ const members = [
   {
     name: "ওসমান গণি জিসান",
     role: "সদস্য",
-    image: "/members/member-19.jpg",
+    image: "/members/member-19.1.jpeg",
   },
 
   {
@@ -166,7 +166,7 @@ const members = [
   {
     name: "Jahedul Islam Chy",
     role: "সদস্য",
-    image: "/members/member-25.jpg",
+    image: "/members/member-25.jpeg",
   },
 {
     name: "শেফায়েত মোহাম্মদ মেহেদী",

@@ -395,7 +395,7 @@ const closeMenu = () => setMenuOpen(false);
           <Link href="/members" className="memberCard">
             <div className="memberPhoto">
               <Image
-                src="/members/advisor.jpg"
+                src="/members/advisor.2.jpg"
                 alt="উপদেষ্টা"
                 fill
                 className="memberImage"
@@ -475,7 +475,7 @@ const closeMenu = () => setMenuOpen(false);
           <Link href="/members" className="memberCard">
             <div className="memberPhoto">
               <Image
-                src="/members/prochar.jpg"
+                src="/members/prochar.jpeg"
                 alt="প্রচার ও প্রকাশনা"
                 fill
                 className="memberImage"
