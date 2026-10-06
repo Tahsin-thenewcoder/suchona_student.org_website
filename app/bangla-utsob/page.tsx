@@ -60,9 +60,33 @@ const closeUtsobMenu = () => setUtsobMenuOpen(false);
   {/* DESKTOP NAV */}
   <nav className="utsobNavLinks">
     <Link href="#notice">নোটিশ</Link>
-    <Link href="#syllabus">সিলেবাস</Link>
-    <Link href="#questions">বিগত বছরের প্রশ্ন</Link>
-    <Link href="#mock-test">মক টেস্ট</Link>
+    <a
+  href="https://drive.google.com/drive/folders/1EiGVXMMsj_v9RbH_ApglxIfcpPv4gugM?usp=drive_link"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={closeUtsobMenu}
+>
+  <span>সিলেবাস</span>
+  <b>↗</b>
+</a>
+     <a
+  href="https://drive.google.com/drive/folders/1JrUBPEktDBXk-o62ZBCeYMxCSBXRzyG0?usp=drive_link"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={closeUtsobMenu}
+>
+  <span>বিগত বছরের প্রশ্ন</span>
+  <b>↗</b>
+</a>
+    <a
+  href="https://bangla-utsob-mock-test.vercel.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={closeUtsobMenu}
+>
+  <span>মক টেস্ট</span>
+  <b>↗</b>
+</a>
     <Link href="#editions">আয়োজনসমূহ</Link>
   </nav>
 
@@ -99,20 +123,33 @@ const closeUtsobMenu = () => setUtsobMenuOpen(false);
         <b>→</b>
       </Link>
 
-      <Link href="#syllabus" onClick={closeUtsobMenu}>
-        <span>সিলেবাস</span>
-        <b>→</b>
-      </Link>
+      <a
+  href="https://drive.google.com/drive/folders/1EiGVXMMsj_v9RbH_ApglxIfcpPv4gugM?usp=drive_link"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  সিলেবাস
+  <b>↗</b>
+</a>
 
-      <Link href="#questions" onClick={closeUtsobMenu}>
-        <span>বিগত বছরের প্রশ্ন</span>
-        <b>→</b>
-      </Link>
 
-      <Link href="#mock-test" onClick={closeUtsobMenu}>
-        <span>মক টেস্ট</span>
-        <b>↗</b>
-      </Link>
+       <a
+  href="https://drive.google.com/drive/folders/1JrUBPEktDBXk-o62ZBCeYMxCSBXRzyG0?usp=drive_link"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  বিগত বছরের প্রশ্ন
+  <b>↗</b>
+</a>
+
+      <a
+  href="https://bangla-utsob-mock-test.vercel.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  মক টেস্ট
+  <b>↗</b>
+</a>
 
       <Link href="#editions" onClick={closeUtsobMenu}>
         <span>আয়োজনসমূহ</span>

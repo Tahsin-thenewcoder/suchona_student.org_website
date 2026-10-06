@@ -43,7 +43,7 @@ const members = [
   {
     name: "আব্দুল্লাহ পারভেজ",
     role: "সদস্য ও সাবেক অর্থ সম্পাদক",
-    image: "/members/member-03.jpg",
+    image: "/members/member-03.jpeg",
   },
   {
     name: "মোহাম্মদ নেজাম উদ্দিন",
@@ -110,7 +110,7 @@ const members = [
   {
     name: "মোহাম্মদ ইমন",
     role: "সদস্য",
-    image: "/members/member-15.jpg",
+    image: "/members/member-15.jpeg",
   },
   {
     name: "মোহাম্মদ ইয়াছিন",
@@ -160,55 +160,70 @@ const members = [
   {
     name: "মোহাম্মদ রাসেল",
     role: "সদস্য",
-    image: "/members/member-24.jpg",
+    image: "/members/member-24.jpeg",
   },
 
   {
     name: "Jahedul Islam Chy",
     role: "সদস্য",
-    image: "/members/member-25.jpeg",
+    image: "/members/member-25.1.jpeg",
   },
-{
+
+  {
     name: "শেফায়েত মোহাম্মদ মেহেদী",
     role: "সদস্য",
     image: "/members/member-26.jpg",
   },
+
+  {
+    name: "রবিউল হাসান নাহিদ",
+    role: "সদস্য",
+    image: "/members/member-27.1.jpeg",
+  },
+  
 
 ];
 
 export default function MembersPage() {
   return (
     <main className="members-page">
-      {/* Header */}
-      <header className="members-header">
-        <Link href="/" className="members-brand">
-          <Image
-            src="/logo.png"
-            alt="সূচনা ছাত্র সংগঠন"
-            width={46}
-            height={46}
-            className="members-logo"
-          />
+     {/* Header */}
+<header className="members-header">
 
-          <div>
-            <h2>সূচনা ছাত্র সংগঠন</h2>
-            <span>ভালো কিছু শুরু হোক</span>
-          </div>
-        </Link>
+  <Link href="/" className="members-brand">
+    <Image
+      src="/logo.png"
+      alt="সূচনা ছাত্র সংগঠন"
+      width={46}
+      height={46}
+      className="members-logo"
+    />
 
-        <nav className="members-nav">
-          <Link href="/">হোম</Link>
-          <Link href="/#about">আমাদের সম্পর্কে</Link>
-          <Link href="/#programs">কার্যক্রম</Link>
-          <Link href="/bangla-utsob">বাংলা উৎসব</Link>
-          <Link href="/members">সদস্যবৃন্দ</Link>
-          <Link href="/#gallery">গ্যালারি</Link>
-        </nav>
+    <div>
+      <h2>সূচনা ছাত্র সংগঠন</h2>
+      <span>ভালো কিছু শুরু হোক</span>
+    </div>
+  </Link>
 
-        <Link href="/#contact" className="members-contact">
-          যোগাযোগ ↗
-        </Link>
-      </header>
+  <nav className="members-nav">
+    <Link href="/">হোম</Link>
+    <Link href="/#about">আমাদের সম্পর্কে</Link>
+    <Link href="/#programs">কার্যক্রম</Link>
+    <Link href="/bangla-utsob">বাংলা উৎসব</Link>
+    <Link href="/members">সদস্যবৃন্দ</Link>
+    <Link href="/#gallery">গ্যালারি</Link>
+  </nav>
+
+  <Link href="/#contact" className="members-contact">
+    যোগাযোগ ↗
+  </Link>
+
+  <Link href="/" className="membersBackHome">
+    <span>←</span>
+    মূল পাতায় ফিরুন
+  </Link>
+
+</header>
 
       {/* Intro */}
       <section className="members-intro">
