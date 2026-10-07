@@ -7573,3 +7573,42 @@ body { line-height: 1.55; }
     height: 36px;
   }
 }
+/* বাংলা উৎসব header brand — mobile fix */
+@media (max-width: 700px) {
+  .utsobNav .utsobBrand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  .utsobNav .utsobBrand > div {
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .utsobNav .utsobBrand strong {
+    display: block !important;
+    visibility: visible !important;
+    color: #076d4e !important;
+    font-size: 13px !important;
+    line-height: 1.15 !important;
+    white-space: nowrap;
+  }
+
+  .utsobNav .utsobBrand span {
+    display: block !important;
+    visibility: visible !important;
+    margin-top: 2px !important;
+    color: #89958f !important;
+    font-size: 8px !important;
+    white-space: nowrap;
+  }
+
+  .utsobNav .utsobBrand img {
+    width: 34px !important;
+    height: 34px !important;
+    flex-shrink: 0;
+  }
+}

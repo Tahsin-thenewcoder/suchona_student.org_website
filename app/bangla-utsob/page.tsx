@@ -43,19 +43,19 @@ const closeUtsobMenu = () => setUtsobMenuOpen(false);
 
       {/* ================= TOP BAR ================= */}
 <header className="utsobNav">
-  <Link href="/" className="utsobBrand">
-    <Image
-      src="/logo.png"
-      alt="সূচনা ছাত্র সংগঠন"
-      width={44}
-      height={44}
-    />
+  <Link href="/bangla-utsob" className="utsobBrand">
+  <Image
+    src="/logo.png"
+    alt="বাংলা উৎসব"
+    width={44}
+    height={44}
+  />
 
-    <div>
-      <strong>সূচনা ছাত্র সংগঠন</strong>
-      <span>ভালো কিছু শুরু হোক</span>
-    </div>
-  </Link>
+  <div>
+    <strong>বাংলা উৎসব</strong>
+    <span>আয়োজনে · সূচনা ছাত্র সংগঠন</span>
+  </div>
+</Link>
 
   {/* DESKTOP NAV */}
   <nav className="utsobNavLinks">
