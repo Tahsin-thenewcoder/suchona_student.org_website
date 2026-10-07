@@ -157,7 +157,7 @@ export default function BanglaUtsob2026() {
 
     <div className="khudePhoto">
       <Image
-        src="/events/bangla-utsob/2026/khude-banglabid.2026.jpg"
+        src="/events/bangla-utsob/2026/khude-banglabid.2026.JPG"
         alt="ক্ষুদে বাংলাবিদ ১৪৩৩"
         fill
         sizes="(max-width: 700px) 100vw, 45vw"
@@ -235,7 +235,7 @@ export default function BanglaUtsob2026() {
 
     <div className="archiveGalleryItem archiveGalleryMain">
       <Image
-        src="/events/bangla-utsob/2026/gallery-01.jpg"
+        src="/events/bangla-utsob/2026/gallery-01.JPG"
         alt="৪র্থ বাংলা উৎসবের মুহূর্ত"
         fill
         sizes="(max-width: 700px) 100vw, 60vw"
