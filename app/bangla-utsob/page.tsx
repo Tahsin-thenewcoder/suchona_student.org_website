@@ -5,18 +5,11 @@ import Link from "next/link";
 
 const editions = [
   {
-    year: "2019",
-    yearBn: "২০১৯",
-    edition: "১ম বাংলা উৎসব",
-    date: "মার্চ ২০১৯",
-    note: "যেখান থেকে শুরু",
-  },
-  {
-    year: "2023",
-    yearBn: "২০২৩",
-    edition: "২য় বাংলা উৎসব",
-    date: "সেপ্টেম্বর ২০২৩",
-    note: "ফিরে আসার আয়োজন",
+    year: "2026",
+    yearBn: "২০২৬",
+    edition: "৪র্থ বাংলা উৎসব",
+    date: "২৬ সেপ্টেম্বর ২০২৬",
+    note: "সর্বশেষ আয়োজন",
   },
   {
     year: "2025",
@@ -26,11 +19,18 @@ const editions = [
     note: "আরও বড় পরিসরে",
   },
   {
-    year: "2026",
-    yearBn: "২০২৬",
-    edition: "৪র্থ বাংলা উৎসব",
-    date: "২৬ সেপ্টেম্বর ২০২৬",
-    note: "সর্বশেষ আয়োজন",
+    year: "2023",
+    yearBn: "২০২৩",
+    edition: "২য় বাংলা উৎসব",
+    date: "সেপ্টেম্বর ২০২৩",
+    note: "ফিরে আসার আয়োজন",
+  },
+  {
+    year: "2019",
+    yearBn: "২০১৯",
+    edition: "১ম বাংলা উৎসব",
+    date: "মার্চ ২০১৯",
+    note: "যেখান থেকে শুরু",
   },
 ];
 
@@ -92,7 +92,7 @@ const closeUtsobMenu = () => setUtsobMenuOpen(false);
 
   <Link href="/" className="backHome">
     <span>←</span>
-    মূল পাতায় ফিরুন
+    সূচনার মূল পাতায় ফিরুন
   </Link>
 
   {/* MOBILE BUTTON */}
@@ -162,7 +162,7 @@ const closeUtsobMenu = () => setUtsobMenuOpen(false);
       className="utsobMobileHome"
       onClick={closeUtsobMenu}
     >
-      ← মূল পাতায় ফিরুন
+      ←সূচনার মূল পাতায় ফিরুন
     </Link>
   </div>
 </header>
@@ -378,17 +378,10 @@ const closeUtsobMenu = () => setUtsobMenuOpen(false);
               </div>
 
 
-              <div className="editionOpen">
-
-                <span>
-                  বিস্তারিত
-                </span>
-
-                <b>
-                  ↗
-                </b>
-
-              </div>
+             <div className="editionOpen">
+  <span>বিস্তারিত</span>
+  <b>↗</b>
+</div>
 
             </Link>
 

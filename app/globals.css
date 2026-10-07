@@ -6124,3 +6124,1452 @@ body { line-height: 1.55; }
     font-size: 15px;
   }
 }
+/* ==================================================
+   BANGLA UTSOB 2026 — ARCHIVE PAGE
+================================================== */
+
+.archive2026 {
+  min-height: 100vh;
+  background: #f7faf8;
+  color: #102a21;
+}
+
+
+/* ================= HEADER ================= */
+
+.archiveNav {
+  height: 92px;
+  padding: 0 6%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e4ebe7;
+
+  position: relative;
+  z-index: 20;
+}
+
+.archiveBrand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.archiveBrand img {
+  object-fit: contain;
+}
+
+.archiveBrand div {
+  display: flex;
+  flex-direction: column;
+}
+
+.archiveBrand strong {
+  color: #076d4e;
+  font-size: 17px;
+  line-height: 1.3;
+}
+
+.archiveBrand span {
+  margin-top: 3px;
+
+  color: #89958f;
+  font-size: 10px;
+}
+
+.archiveBack {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #172a23;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.archiveBack span {
+  transition: transform 0.2s ease;
+}
+
+.archiveBack:hover span {
+  transform: translateX(-4px);
+}
+
+
+/* ================= HERO ================= */
+
+.archiveHero {
+  min-height: 680px;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 75px;
+
+  padding: 70px 6% 75px;
+}
+
+
+/* LEFT */
+
+.archiveHeroContent {
+  max-width: 650px;
+}
+
+.archiveEditionLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 27px;
+}
+
+.archiveEditionLabel span {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0b875f;
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.archiveEditionLabel p {
+  margin: 0;
+
+  color: #07875f;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.archiveHeroContent h1 {
+  margin: 0;
+
+  color: #102a21;
+
+  font-size: clamp(64px, 6.2vw, 112px);
+  line-height: 0.88;
+  letter-spacing: -4px;
+
+  font-weight: 900;
+}
+
+.archiveHeroContent h1 span {
+  color: #07875f;
+}
+
+.archiveIntro {
+  max-width: 560px;
+
+  margin: 38px 0 0;
+
+  color: #65736d;
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* INFO */
+
+.archiveEventInfo {
+  display: flex;
+  gap: 50px;
+
+  margin-top: 42px;
+  padding-top: 24px;
+
+  border-top: 1px solid #dce5e0;
+}
+
+.archiveEventInfo div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.archiveEventInfo small {
+  color: #8b9892;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.archiveEventInfo strong {
+  color: #173029;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+
+/* ================= PHOTO ================= */
+
+.archiveHeroVisual {
+  position: relative;
+
+  width: 100%;
+  height: 570px;
+}
+
+.archiveHeroPhoto {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  border-radius: 32px;
+  background: #e5ece8;
+}
+
+.archiveHeroPhoto img {
+  object-fit: cover;
+}
+
+.archivePhotoOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(5, 31, 23, 0.78) 0%,
+      rgba(5, 31, 23, 0.08) 48%,
+      rgba(5, 31, 23, 0) 70%
+    );
+}
+
+.archivePhotoCaption {
+  position: absolute;
+
+  left: 32px;
+  bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  color: #fff;
+}
+
+.archivePhotoCaption span {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.archivePhotoCaption strong {
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.archiveYearBadge {
+  position: absolute;
+
+  right: -22px;
+  top: 35px;
+
+  width: 125px;
+  height: 105px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 18px;
+
+  background: #fff;
+
+  border-radius: 18px;
+
+  box-shadow: 0 18px 45px rgba(20, 55, 43, 0.14);
+}
+
+.archiveYearBadge small {
+  color: #89968f;
+  font-size: 10px;
+}
+
+.archiveYearBadge strong {
+  margin-top: 2px;
+
+  color: #07875f;
+
+  font-size: 28px;
+  line-height: 1;
+}
+
+
+/* ================= STATS ================= */
+
+.archiveStats {
+  margin: 0 6% 80px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  background: #102a21;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+}
+
+.archiveStat {
+  position: relative;
+
+  min-height: 175px;
+
+  padding: 27px 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  color: #fff;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.archiveStatLast {
+  border-right: 0;
+}
+
+.archiveStat > span {
+  position: absolute;
+
+  top: 22px;
+  left: 30px;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  font-size: 10px;
+}
+
+.archiveStat strong {
+  color: #fff;
+
+  font-size: 40px;
+  line-height: 1;
+
+  font-weight: 850;
+}
+
+.archiveStat p {
+  margin: 8px 0 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 12px;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+  .archiveHero {
+    grid-template-columns: 1fr;
+    gap: 50px;
+
+    padding-top: 55px;
+  }
+
+  .archiveHeroContent {
+    max-width: 700px;
+  }
+
+  .archiveHeroVisual {
+    height: 600px;
+  }
+
+  .archiveStats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .archiveStat:nth-child(2) {
+    border-right: 0;
+  }
+
+  .archiveStat:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(255,255,255,0.13);
+  }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+  .archiveNav {
+    height: 76px;
+
+    padding: 0 18px;
+  }
+
+  .archiveBrand {
+    gap: 8px;
+  }
+
+  .archiveBrand img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .archiveBrand strong {
+    font-size: 14px;
+  }
+
+  .archiveBrand span {
+    font-size: 9px;
+  }
+
+  .archiveBack {
+    font-size: 11px;
+    gap: 4px;
+  }
+
+
+  /* HERO */
+
+  .archiveHero {
+    min-height: auto;
+
+    padding: 48px 18px 45px;
+
+    gap: 38px;
+  }
+
+  .archiveEditionLabel {
+    margin-bottom: 20px;
+  }
+
+  .archiveEditionLabel span {
+    width: 34px;
+    height: 34px;
+  }
+
+  .archiveHeroContent h1 {
+    font-size: clamp(51px, 15vw, 70px);
+    line-height: 0.92;
+    letter-spacing: -2px;
+  }
+
+  .archiveIntro {
+    margin-top: 25px;
+
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .archiveEventInfo {
+    margin-top: 28px;
+    padding-top: 19px;
+
+    gap: 25px;
+  }
+
+  .archiveEventInfo div {
+    flex: 1;
+  }
+
+  .archiveEventInfo strong {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+
+  /* PHOTO */
+
+  .archiveHeroVisual {
+    height: auto;
+  }
+
+  .archiveHeroPhoto {
+    height: auto;
+
+    aspect-ratio: 4 / 5;
+
+    border-radius: 20px;
+  }
+
+  .archivePhotoCaption {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  .archivePhotoCaption strong {
+    font-size: 17px;
+  }
+
+  .archiveYearBadge {
+    top: -18px;
+    right: 13px;
+
+    width: 105px;
+    height: 82px;
+
+    padding: 14px;
+
+    border-radius: 14px;
+  }
+
+  .archiveYearBadge strong {
+    font-size: 23px;
+  }
+
+
+  /* STATS */
+
+  .archiveStats {
+    margin: 0 18px 55px;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    border-radius: 17px;
+  }
+
+  .archiveStat {
+    min-height: 135px;
+
+    padding: 22px;
+  }
+
+  .archiveStat > span {
+    top: 18px;
+    left: 22px;
+  }
+
+  .archiveStat strong {
+    font-size: 30px;
+  }
+
+  .archiveStat p {
+    font-size: 11px;
+  }
+}
+/* 2026 QUICK INFO — COMPACT */
+
+.archiveStatsCompact {
+  max-width: 1180px;
+  margin: 0 auto 70px;
+  grid-template-columns: 0.85fr 1.3fr 0.85fr;
+}
+
+.archiveStatsCompact .archiveStat {
+  min-height: 145px;
+  padding: 24px 28px;
+}
+
+.archiveStatsCompact .archiveStat > span {
+  top: 18px;
+  left: 28px;
+}
+
+.archiveStatsCompact .archiveStat strong {
+  font-size: 34px;
+}
+
+.archiveStatsCompact .archiveStat p {
+  margin-top: 6px;
+}
+
+.competitionNames {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin-top: 12px;
+}
+
+.competitionNames b {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255,255,255,.72);
+}
+
+.competitionNames b:not(:last-child)::after {
+  content: "•";
+  margin-left: 14px;
+  color: #6ed5ae;
+}
+
+@media (max-width: 700px) {
+  .archiveStatsCompact {
+    margin: 0 18px 50px;
+    grid-template-columns: 1fr;
+  }
+
+  .archiveStatsCompact .archiveStat {
+    min-height: 125px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+  }
+
+  .archiveStatsCompact .archiveStat:last-child {
+    border-bottom: 0;
+  }
+}
+/* ==========================================
+   KHUDE BANGLABID — 2026
+========================================== */
+
+.khudeBanglabid {
+  max-width: 1180px;
+  margin: 0 auto 90px;
+  padding: 65px;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 75px;
+
+  background: #f5efe1;
+  border-radius: 30px;
+}
+
+
+/* LEFT */
+
+.khudeLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 0 0 22px;
+
+  color: #8c6923;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.khudeLabel span {
+  font-size: 15px;
+}
+
+.khudeContent h2 {
+  margin: 0;
+
+  color: #102a21;
+  font-size: clamp(48px, 5vw, 76px);
+  line-height: 0.95;
+  letter-spacing: -2px;
+  font-weight: 900;
+}
+
+.khudeContent h2 span {
+  color: #0b875f;
+}
+
+.khudeDescription {
+  max-width: 470px;
+
+  margin: 27px 0 0;
+
+  color: #66736d;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* WINNER */
+
+.khudeWinner {
+  margin-top: 34px;
+  padding-top: 22px;
+
+  border-top: 1px solid rgba(16, 42, 33, 0.15);
+}
+
+.khudeWinner small {
+  color: #927126;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.khudeWinner h3 {
+  margin: 5px 0 3px;
+
+  color: #102a21;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.khudeWinner p {
+  margin: 0;
+
+  color: #78837e;
+  font-size: 12px;
+}
+
+
+/* PHOTO */
+
+.khudePhotoWrap {
+  position: relative;
+}
+
+.khudePhoto {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+  border-radius: 24px;
+
+  background: #e4e8e5;
+}
+
+.khudePhoto img {
+  object-fit: cover;
+}
+
+
+/* FLOATING BADGE */
+
+.khudeBadge {
+  position: absolute;
+
+  left: -35px;
+  bottom: 30px;
+
+  min-width: 145px;
+
+  padding: 17px 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #102a21;
+  color: white;
+
+  border-radius: 16px;
+
+  box-shadow: 0 15px 35px rgba(16, 42, 33, 0.2);
+}
+
+.khudeBadge span {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.khudeBadge strong {
+  margin-top: 2px;
+
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.khudeBadge small {
+  margin-top: 5px;
+
+  color: #86ddb9;
+  font-size: 11px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+  .khudeBanglabid {
+    margin: 0 18px 60px;
+    padding: 38px 22px 22px;
+
+    grid-template-columns: 1fr;
+    gap: 32px;
+
+    border-radius: 22px;
+  }
+
+  .khudeContent h2 {
+    font-size: 48px;
+    letter-spacing: -1px;
+  }
+
+  .khudeDescription {
+    margin-top: 20px;
+
+    font-size: 13px;
+  }
+
+  .khudeWinner {
+    margin-top: 25px;
+  }
+
+  .khudeWinner h3 {
+    font-size: 21px;
+  }
+
+  .khudePhoto {
+    border-radius: 17px;
+  }
+
+  .khudeBadge {
+    left: 14px;
+    bottom: 14px;
+
+    min-width: 125px;
+
+    padding: 13px 16px;
+
+    border-radius: 12px;
+  }
+
+  .khudeBadge strong {
+    font-size: 16px;
+  }
+}
+/* KHUDE BANGLABID — MOBILE COMPACT */
+@media (max-width: 700px) {
+
+  .khudeBanglabid {
+    margin: 0 16px 45px;
+    padding: 28px 18px 18px;
+    gap: 22px;
+    border-radius: 20px;
+  }
+
+  .khudeLabel {
+    margin-bottom: 14px;
+    font-size: 10px;
+  }
+
+  .khudeContent h2 {
+    font-size: 40px;
+    line-height: 0.95;
+  }
+
+  .khudeDescription {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .khudeWinner {
+    margin-top: 18px;
+    padding-top: 15px;
+  }
+
+  .khudeWinner h3 {
+    font-size: 19px;
+  }
+
+  .khudeWinner p {
+    font-size: 10px;
+  }
+
+  .khudePhoto {
+    width: 100%;
+    height: 310px;
+    aspect-ratio: auto;
+  }
+
+  .khudePhoto img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .khudeBadge {
+    left: 12px;
+    bottom: 12px;
+    min-width: 105px;
+    padding: 10px 13px;
+  }
+
+  .khudeBadge strong {
+    font-size: 14px;
+  }
+
+  .khudeBadge small {
+    font-size: 9px;
+  }
+}
+/* ==========================================
+   2026 RESULT
+========================================== */
+
+.utsobResult {
+  max-width: 1180px;
+  margin: 0 auto 90px;
+  padding: 70px 0;
+}
+
+.resultTop {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 70px;
+  align-items: end;
+}
+
+.resultLabel {
+  margin: 0 0 18px;
+
+  color: #07875f;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.resultTop h2 {
+  margin: 0;
+
+  color: #102a21;
+  font-size: clamp(52px, 5vw, 78px);
+  line-height: 0.92;
+  letter-spacing: -2px;
+  font-weight: 900;
+}
+
+.resultTop h2 span {
+  color: #07875f;
+}
+
+.resultIntro {
+  max-width: 390px;
+  margin: 0 0 5px;
+
+  color: #69766f;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* RESULT BAR */
+
+.resultAction {
+  margin-top: 45px;
+  padding: 25px 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  background: #102a21;
+  border-radius: 18px;
+}
+
+.resultAction > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.resultAction > div span {
+  color: rgba(255,255,255,.55);
+  font-size: 10px;
+}
+
+.resultAction > div strong {
+  color: #fff;
+  font-size: 17px;
+}
+
+.resultButton {
+  flex-shrink: 0;
+
+  padding: 13px 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: #fff;
+  color: #102a21;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+
+  transition: transform .2s ease;
+}
+
+.resultButton:hover {
+  transform: translateY(-2px);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+  .utsobResult {
+    margin: 0 18px 50px;
+    padding: 25px 0;
+  }
+
+  .resultTop {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .resultLabel {
+    margin-bottom: 12px;
+    font-size: 10px;
+  }
+
+  .resultTop h2 {
+    font-size: 43px;
+    line-height: .94;
+    letter-spacing: -1px;
+  }
+
+  .resultIntro {
+    max-width: 100%;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .resultAction {
+    margin-top: 24px;
+    padding: 18px;
+
+    gap: 15px;
+
+    border-radius: 14px;
+  }
+
+  .resultAction > div strong {
+    font-size: 14px;
+  }
+
+  .resultButton {
+    padding: 11px 13px;
+
+    gap: 6px;
+
+    border-radius: 8px;
+    font-size: 10px;
+  }
+}
+
+
+/* VERY SMALL PHONE */
+
+@media (max-width: 380px) {
+
+  .resultAction {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .resultButton {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+/* ==========================================
+   2026 ARCHIVE GALLERY
+========================================== */
+
+.archiveGallery {
+  max-width: 1180px;
+  margin: 0 auto 100px;
+}
+
+
+/* HEADER */
+
+.archiveGalleryHead {
+  margin-bottom: 38px;
+
+  display: grid;
+  grid-template-columns: 1fr 0.65fr;
+  align-items: end;
+  gap: 60px;
+}
+
+.archiveGalleryHead > div > p {
+  margin: 0 0 15px;
+
+  color: #07875f;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.archiveGalleryHead h2 {
+  margin: 0;
+
+  color: #102a21;
+
+  font-size: clamp(48px, 5vw, 76px);
+  line-height: 0.94;
+  letter-spacing: -2px;
+
+  font-weight: 900;
+}
+
+.archiveGalleryHead h2 span {
+  color: #07875f;
+}
+
+.archiveGalleryIntro {
+  max-width: 370px;
+  margin: 0 0 5px;
+
+  color: #69766f;
+
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+
+/* GRID */
+
+.archiveGalleryGrid {
+  display: grid;
+
+  grid-template-columns: 1.25fr 0.75fr;
+  grid-template-rows: 245px 245px 300px;
+
+  gap: 12px;
+}
+
+
+/* IMAGE */
+
+.archiveGalleryItem {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #e6ebe8;
+}
+
+.archiveGalleryItem img {
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.archiveGalleryItem:hover img {
+  transform: scale(1.035);
+}
+
+
+/* BIG LEFT IMAGE */
+
+.archiveGalleryMain {
+  grid-row: span 2;
+}
+
+
+/* LAST WIDE IMAGE */
+
+.archiveGalleryWide {
+  grid-column: 1 / -1;
+}
+
+
+/* BOTTOM */
+
+.archiveGalleryBottom {
+  margin-top: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.archiveGalleryBottom > span {
+  color: #8b9691;
+
+  font-size: 11px;
+}
+
+.archiveGalleryBottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #102a21;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.archiveGalleryBottom a b {
+  color: #07875f;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+  .archiveGallery {
+    margin: 0 18px 60px;
+  }
+
+
+  /* HEADER */
+
+  .archiveGalleryHead {
+    margin-bottom: 24px;
+
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .archiveGalleryHead > div > p {
+    margin-bottom: 10px;
+
+    font-size: 10px;
+  }
+
+  .archiveGalleryHead h2 {
+    font-size: 42px;
+    line-height: 0.95;
+
+    letter-spacing: -1px;
+  }
+
+  .archiveGalleryIntro {
+    max-width: 100%;
+
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+
+  /* MOBILE GRID */
+
+  .archiveGalleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: none;
+
+    gap: 8px;
+  }
+
+  .archiveGalleryItem {
+    height: 155px;
+
+    border-radius: 11px;
+  }
+
+  .archiveGalleryMain {
+    grid-column: 1 / -1;
+    grid-row: auto;
+
+    height: 250px;
+  }
+
+  .archiveGalleryWide {
+    grid-column: 1 / -1;
+
+    height: 210px;
+  }
+
+
+  /* BOTTOM */
+
+  .archiveGalleryBottom {
+    margin-top: 14px;
+  }
+
+  .archiveGalleryBottom > span {
+    font-size: 9px;
+  }
+
+  .archiveGalleryBottom a {
+    font-size: 11px;
+  }
+}
+/* ==========================================
+   ARCHIVE CLOSING
+========================================== */
+
+.archiveClosing {
+  max-width: 1180px;
+  margin: 0 auto 45px;
+  padding: 50px 55px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+
+  background: #102a21;
+  border-radius: 24px;
+}
+
+.archiveClosingText > span {
+  display: block;
+  margin-bottom: 15px;
+
+  color: #86ddb9;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.archiveClosingText h2 {
+  margin: 0;
+
+  color: #fff;
+  font-size: clamp(35px, 4vw, 55px);
+  line-height: 1;
+  letter-spacing: -1.5px;
+  font-weight: 900;
+}
+
+.archiveClosingText h2 strong {
+  color: #86ddb9;
+  font-weight: inherit;
+}
+
+.archiveClosingText p {
+  margin: 18px 0 0;
+
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 11px;
+}
+
+
+/* LINKS */
+
+.archiveClosingLinks {
+  display: flex;
+  gap: 10px;
+}
+
+.archiveClosingLinks a {
+  padding: 12px 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 9px;
+
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.archiveClosingLinks a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+  .archiveClosing {
+    margin: 0 18px 25px;
+    padding: 32px 22px;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+
+    border-radius: 18px;
+  }
+
+  .archiveClosingText > span {
+    margin-bottom: 10px;
+    font-size: 9px;
+  }
+
+  .archiveClosingText h2 {
+    font-size: 34px;
+    line-height: 1.02;
+    letter-spacing: -0.7px;
+  }
+
+  .archiveClosingText p {
+    margin-top: 13px;
+    font-size: 10px;
+  }
+
+  .archiveClosingLinks {
+    width: 100%;
+  }
+
+  .archiveClosingLinks a {
+    flex: 1;
+    justify-content: center;
+
+    padding: 11px 8px;
+
+    font-size: 10px;
+  }
+}
+/* ==========================================
+   BANGLA UTSOB EDITION LIST — COMPACT
+========================================== */
+
+.editionRow {
+  min-height: 118px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.editionRow h3 {
+  margin: 4px 0 0 !important;
+  line-height: 0.95 !important;
+}
+
+.editionOpen {
+  gap: 14px;
+}
+
+.editionOpen b {
+  width: 42px;
+  height: 42px;
+}
+
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+  .editionRow {
+    min-height: auto !important;
+    padding: 22px 4px !important;
+  }
+
+  .editionRow h3 {
+    font-size: 42px !important;
+  }
+
+  .editionOpen b {
+    width: 36px;
+    height: 36px;
+  }
+}

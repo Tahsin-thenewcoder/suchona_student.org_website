@@ -80,7 +80,7 @@ const members = [
   {
     name: "ইয়াছিন আরফাত",
     role: "সদস্য",
-    image: "/members/member-10.jpg",
+    image: "/members/member-10.1.jpeg",
   },
   {
     name: "নাজমুল হুদা আসিফ",
@@ -95,7 +95,7 @@ const members = [
   {
     name: "রাকিবুল ইসলাম আরফাত",
     role: "সদস্য",
-    image: "/members/member-12.jpg",
+    image: "/members/member-12.1.jpeg",
   },
   {
     name: "হুমায়ুন কবির তুহিন",
