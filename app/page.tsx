@@ -363,6 +363,24 @@ const closeMenu = () => setMenuOpen(false);
             </button>
           </article>
         </div>
+        {/* OUR DREAMS */}
+<Link href="/dreams" className="dreamsBanner">
+  <div className="dreamsBannerContent">
+    <span className="dreamsBannerLabel">আগামী দিনের পরিকল্পনা</span>
+
+    <h3>আমাদের স্বপ্ন<span>।</span></h3>
+
+    <p>
+      শিক্ষা সহায়তা বৃত্তি, সহশিক্ষা কার্যক্রমের বিকাশ এবং
+      একটি উন্মুক্ত পাঠাগার প্রতিষ্ঠার স্বপ্ন।
+    </p>
+  </div>
+
+  <div className="dreamsBannerAction">
+    <span>স্বপ্নগুলো জানুন</span>
+    <b>↗</b>
+  </div>
+</Link>
       </section>
 
       {/* MEMBERS PREVIEW */}
@@ -516,13 +534,13 @@ const closeMenu = () => setMenuOpen(false);
     <a href="/gallery" className="gallery-feature-card">
       <div className="gallery-collage-card">
         <img
-          src="/gallery/image1.jpeg"
+          src="/gallery/image3.1.jpeg"
           alt="বাংলা উৎসব"
           className="gallery-img gallery-img-main"
         />
 
         <img
-          src="/gallery/image2.jpeg"
+          src="/gallery/image12.1.JPG"
           alt="বাংলা উৎসব"
           className="gallery-img gallery-img-top"
         />

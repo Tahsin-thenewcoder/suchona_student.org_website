@@ -14,7 +14,7 @@ type GalleryEvent = {
   id: number;
   date: string;
   title: string;
-  description: string;
+  description: React.ReactNode;
   photos: GalleryPhoto[];
 };
 
@@ -23,28 +23,25 @@ const events: GalleryEvent[] = [
     id: 1,
     date: "২৬ সেপ্টেম্বর ২০২৬",
     title: "৪র্থ বাংলা উৎসব ১৪৩৩",
-    description: "বাংলা ভাষা, সাহিত্য ও সৃজনশীলতার এক দিনব্যাপী আয়োজন।",
+    description: "বাংলা ভাষা, সাহিত্য ও সৃজনশীলতার এক দিনব্যাপী আয়োজন। আরও বড় পরিসরে।",
     photos: [
       {
         src: "/gallery/full-view/bangla-utsob-2026-01.JPG",
-        caption: "প্রতিযোগীদের অংশগ্রহণ",
+        caption: "প্রতিযোগীদের অংশগ্রহণ (বাংলা ভাষা ও সাহিত্য অলিম্পিয়াড)",
       },
       {
         src: "/gallery/full-view/bangla-utsob-2026-02.JPG",
-        caption: "প্রতিযোগীদের অংশগ্রহণ",
+        caption: "প্রতিযোগীদের অংশগ্রহণ (বাংলা ভাষা ও সাহিত্য অলিম্পিয়াড)",
       },
       {
         src: "/gallery/full-view/bangla-utsob-2026-03.JPG",
-        caption: "প্রতিযোগীদের অংশগ্রহণ",
+        caption: "প্রতিযোগীদের অংশগ্রহণ (বাংলা ভাষা ও সাহিত্য অলিম্পিয়াড)",
       },
       {
         src: "/gallery/full-view/bangla-utsob-2026-04.JPG",
-        caption: "প্রতিযোগীদের অংশগ্রহণ",
+        caption: "প্রতিযোগীদের অংশগ্রহণ (বাংলা ভাষা ও সাহিত্য অলিম্পিয়াড)",
       },
-      {
-        src: "/gallery/full-view/bangla-utsob-2026-05.CR2",
-        caption: "প্রতিযোগীদের অংশগ্রহণ",
-      },
+      
       {
         src: "/gallery/full-view/bangla-utsob-2026-06.JPG",
         caption: "কক্ষ পরিদর্শনে অতিথিবৃন্দ",
@@ -105,24 +102,82 @@ const events: GalleryEvent[] = [
         src: "/gallery/full-view/bangla-utsob-2026-21.JPG",
         caption: "একটি সফল আয়োজন শেষে",
       },
+      {
+        src: "/gallery/full-view/bangla-utsob-2026-22.jpeg",
+        caption: "বাংলা উৎসবের প্রচারে বিভিন্ন বিদ্যালয়ে প্রচার টিম",
+      },
+      {
+        src: "/gallery/full-view/bangla-utsob-2026-23.jpeg",
+        caption: "বাংলা উৎসবের প্রচারে বিভিন্ন বিদ্যালয়ে প্রচার টিম",
+      },
     ],
   },
   {
     id: 2,
     date: "৩০ আগস্ট ২০২৫",
     title: "৩য় বাংলা উৎসব ১৪৩২",
-    description: "শিক্ষার্থীদের অংশগ্রহণে বাংলা ভাষা ও সাহিত্যের উৎসব।",
+    description: "শিক্ষার্থীদের অংশগ্রহণে প্রথমবার আন্তঃবিদ্যালয় পর্যায়ে বাংলা ভাষা ও সাহিত্যের উৎসব।",
     photos: [
       {
-        src: "/gallery/bangla-utsob-2025-01.jpg",
-        caption: "আয়োজনের স্মরণীয় মুহূর্ত",
+        src: "/gallery/full-view/2025/bangla-utsob-2025-01.jpeg",
+        caption: "বাংলা ভাষা ও সাহিত্য অলিম্পিয়াডে অংশগ্রহণরত শিক্ষার্থীরা",
       },
       {
-        src: "/gallery/bangla-utsob-2025-02.jpg",
-        caption: "প্রতিযোগিতা ও পুরস্কার",
+        src: "/gallery/full-view/2025/bangla-utsob-2025-02.jpeg",
+        caption: "আমন্ত্রিত অতিথিবৃন্দ",
+      },
+      {
+        src: "/gallery/full-view/2025/bangla-utsob-2025-03.jpeg",
+        caption: "৩য় আসরের বিজয়ীরা",
+      },
+      {
+        src: "/gallery/full-view/2025/bangla-utsob-2025-04.jpeg",
+        caption: "একটি সফল আয়োজন শেষে অতিথিবৃন্দ ও আয়োজকবৃন্দ",
       },
     ],
   },
+
+  {
+    id: 3,
+    date: "২৩ সেপ্টেম্বর ২০২৩",
+    title: "২য় বাংলা উৎসব ১৪৩০",
+    description: "দীর্ঘ বিরতির পর প্রিয় আঙ্গিনায় ফিরে আসা বাংলা উৎসবের আয়োজন।",
+    photos: [
+      {
+        src: "/gallery/full-view/2023/bangla-utsob-2023-01.jpeg",
+        caption: "বাংলা ভাষা ও সাহিত্য অলিম্পিয়াডে অংশগ্রহণরত শিক্ষার্থীরা",
+      },
+    ]
+  },
+  
+  {
+    id: 4,
+    date: "মার্চ ২০১৯",
+    title: "১ম বাংলা উৎসব ১৪২৫",
+    description: (
+  <>
+    যেখান থেকে শুরু। প্রথম আয়োজনের নাম ছিল{" "}
+    <b>‘বাংলা ভাষা ও ব্যাকরণ উৎসব’</b>।
+    তখন আমরা ছিলাম দশম শ্রেণির শিক্ষার্থী।
+    আজকের এই আয়োজনের জন্য আমরা{" "}
+    <b>শ্রদ্ধেয় শিক্ষক এনামুল হক স্যারের</b> প্রতি কৃতজ্ঞ।
+    স্যার সেদিন আমাদের প্রস্তাবে সায় দিয়ে উৎসাহিত করেছিলেন বলেই
+    আমরা আজকের এই পর্যায়ে পৌঁছাতে পেরেছি।
+    অনুষ্ঠানের বিভিন্ন কেনাকাটায় সাহায্য করেছেন{" "}
+    <b>শ্রদ্ধেয় শিক্ষক আরিফুল ইসলাম স্যার</b>।
+    আর <b>২০২০ ব্যাচ</b> মহা উৎসাহে এই আয়োজনের জন্য
+    শ্রম, মেধা ও সময় দিয়েছে এবং দিয়ে আসছে।
+    এ যাত্রা থামার নয়। ইনশাআল্লাহ,
+    আমরা আরও বড় পরিসরে এই আয়োজনকে এগিয়ে নিয়ে যাব।
+  </>
+), 
+    photos: [
+      {
+        src: "/gallery/full-view/2019/bangla-utsob-2019-01.jpeg",
+        caption: "আমাদের ছোট্ট আয়োজনে উৎসাহ দিতে উপস্থিত ছিলেন আমাদের শ্রদ্ধেয় শিক্ষকবৃন্দ।",
+      },
+    ]
+  }
 ];
 
 export default function GalleryPage() {

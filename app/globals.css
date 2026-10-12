@@ -8047,3 +8047,159 @@ body { line-height: 1.55; }
     right: 18px;
   }
 }
+/* ================================
+   HOMEPAGE DREAMS BANNER
+================================ */
+
+.dreamsBanner {
+  margin-top: 22px;
+  padding: 34px 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background: #eaf4ee;
+  border: 1px solid #d8e8de;
+  border-radius: 22px;
+  text-decoration: none;
+  color: #102a21;
+  transition: background .25s ease, transform .25s ease;
+}
+
+.dreamsBanner:hover {
+  background: #dceee3;
+  transform: translateY(-3px);
+}
+
+.dreamsBannerLabel {
+  display: block;
+  margin-bottom: 9px;
+  color: #07875f;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.dreamsBannerContent h3 {
+  margin: 0;
+  color: #102a21;
+  font-size: clamp(29px, 3vw, 42px);
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.dreamsBannerContent h3 span {
+  color: #07875f;
+}
+
+.dreamsBannerContent p {
+  max-width: 570px;
+  margin: 12px 0 0;
+  color: #63756a;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.dreamsBannerAction {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  color: #087653;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.dreamsBannerAction b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #102a21;
+  color: white;
+  font-size: 21px;
+  transition: transform .25s ease;
+}
+
+.dreamsBanner:hover .dreamsBannerAction b {
+  transform: rotate(45deg);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .dreamsBanner {
+    margin-top: 16px;
+    padding: 25px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    border-radius: 17px;
+  }
+
+  .dreamsBannerContent h3 {
+    font-size: 30px;
+  }
+
+  .dreamsBannerContent p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .dreamsBannerAction {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+
+  .dreamsBannerAction b {
+    width: 39px;
+    height: 39px;
+    font-size: 18px;
+  }
+}
+/* ==================================
+   GALLERY TIMELINE - TEXT READABILITY
+================================== */
+
+/* Main description */
+.timelineEventHeading > p {
+  color: #34483f;
+  font-size: 15px;
+  line-height: 1.95;
+  font-weight: 400;
+}
+
+/* Highlighted words */
+.timelineEventHeading > p b,
+.timelineEventHeading > p strong {
+  color: #102a21;
+  font-weight: 800;
+}
+
+/* Photo captions */
+.timelinePhoto figcaption {
+  color: #52665b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Timeline date */
+.timelineEventDate time {
+  color: #087653;
+  font-weight: 800;
+}
+
+/* Mobile readability */
+@media (max-width: 700px) {
+  .timelineEventHeading > p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .timelinePhoto figcaption {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+}

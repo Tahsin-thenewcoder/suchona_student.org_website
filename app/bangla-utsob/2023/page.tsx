@@ -145,8 +145,8 @@ export default function BanglaUtsob2026() {
 
     <div className="khudeWinner">
       <small>ক্ষুদে বাংলাবিদ</small>
-      <h3>বিজয়ীর নাম</h3>
-      <p>বিদ্যালয়ের নাম · শ্রেণি</p>
+      <h3>মাইমুনা জন্নাত</h3>
+      <p>বহদ্দারকাটা উচ্চ বিদ্যালয় · ৭ম শ্রেণি</p>
     </div>
 
   </div>

@@ -285,7 +285,7 @@ export default function BanglaUtsob2026() {
     <span>০৫টি নির্বাচিত মুহূর্ত</span>
 
     <a
-      href="YOUR_FULL_GALLERY_LINK"
+      href="https://drive.google.com/drive/folders/1dfjLGsEfdDFdYmsxy3iHoIs8FvzSPYel?usp=drive_link"
       target="_blank"
       rel="noopener noreferrer"
     >
