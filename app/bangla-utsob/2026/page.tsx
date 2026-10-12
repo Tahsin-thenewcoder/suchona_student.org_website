@@ -21,7 +21,7 @@ export default function BanglaUtsob2026() {
           </div>
         </Link>
 
-        <Link href="/bangla-utsob" className="archiveBack">
+        <Link href="/bangla-utsob/#editions" className="archiveBack">
           <span>←</span>
           সব আয়োজনে ফিরুন
         </Link>
@@ -146,8 +146,8 @@ export default function BanglaUtsob2026() {
 
     <div className="khudeWinner">
       <small>ক্ষুদে বাংলাবিদ</small>
-      <h3>বিজয়ীর নাম</h3>
-      <p>বিদ্যালয়ের নাম · শ্রেণি</p>
+      <h3>তাসপিয়াতুল জন্নাত শিফা</h3>
+      <p>বহদ্দারকাটা আল ঈমান মহিলা দাখিল মাদরাসা · সপ্তম শ্রেণি</p>
     </div>
 
   </div>
@@ -244,7 +244,7 @@ export default function BanglaUtsob2026() {
 
     <div className="archiveGalleryItem">
       <Image
-        src="/events/bangla-utsob/2026/gallery-02.jpg"
+        src="/events/bangla-utsob/2026/gallery-02.JPG"
         alt="৪র্থ বাংলা উৎসবের মুহূর্ত"
         fill
         sizes="(max-width: 700px) 50vw, 30vw"
@@ -253,7 +253,7 @@ export default function BanglaUtsob2026() {
 
     <div className="archiveGalleryItem">
       <Image
-        src="/events/bangla-utsob/2026/gallery-03.jpg"
+        src="/events/bangla-utsob/2026/gallery-03.JPG"
         alt="৪র্থ বাংলা উৎসবের মুহূর্ত"
         fill
         sizes="(max-width: 700px) 50vw, 30vw"
@@ -262,7 +262,7 @@ export default function BanglaUtsob2026() {
 
     <div className="archiveGalleryItem">
       <Image
-        src="/events/bangla-utsob/2026/gallery-04.jpg"
+        src="/events/bangla-utsob/2026/gallery-04.JPG"
         alt="৪র্থ বাংলা উৎসবের মুহূর্ত"
         fill
         sizes="(max-width: 700px) 50vw, 30vw"
@@ -285,7 +285,7 @@ export default function BanglaUtsob2026() {
     <span>০৫টি নির্বাচিত মুহূর্ত</span>
 
     <a
-      href="YOUR_FULL_GALLERY_LINK"
+      href="https://drive.google.com/drive/folders/1KgPHcLCgD7GaGP_v9rRs27oluK6B131J?usp=drive_link"
       target="_blank"
       rel="noopener noreferrer"
     >

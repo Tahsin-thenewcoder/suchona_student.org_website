@@ -40,7 +40,7 @@ const closeMenu = () => setMenuOpen(false);
     <a href="#home">হোম</a>
     <a href="#about">আমাদের সম্পর্কে</a>
     <a href="#activities">কার্যক্রম</a>
-    <Link href="/bangla-utsob">বাংলা উৎসব</Link>
+    <a href="/bangla-utsob" target="_blank" rel="noopener noreferrer">বাংলা উৎসব</a>
     <Link href="/members">সদস্যবৃন্দ</Link>
     <a href="#gallery">গ্যালারি</a>
   </nav>

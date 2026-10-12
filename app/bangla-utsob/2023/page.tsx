@@ -21,7 +21,7 @@ export default function BanglaUtsob2026() {
           </div>
         </Link>
 
-        <Link href="/bangla-utsob" className="archiveBack">
+        <Link href="/bangla-utsob/#editions" className="archiveBack">
           <span>←</span>
           সব আয়োজনে ফিরুন
         </Link>

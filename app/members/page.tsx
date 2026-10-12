@@ -85,7 +85,7 @@ const members = [
   {
     name: "নাজমুল হুদা আসিফ",
     role: "সদস্য",
-    image: "/members/member-11.jpg",
+    image: "/members/member-11.jpeg",
   },
   {
     name: "নাছিয়াতুল রায়ন",
@@ -115,7 +115,7 @@ const members = [
   {
     name: "মোহাম্মদ ইয়াছিন",
     role: "সদস্য",
-    image: "/members/member-16.jpg",
+    image: "/members/member-16.jpeg",
   },
   {
     name: "শহিদুল ইসলাম",
@@ -172,13 +172,18 @@ const members = [
   {
     name: "শেফায়েত মোহাম্মদ মেহেদী",
     role: "সদস্য",
-    image: "/members/member-26.jpg",
+    image: "/members/member-26.jpeg",
   },
 
   {
     name: "রবিউল হাসান নাহিদ",
     role: "সদস্য",
     image: "/members/member-27.1.jpeg",
+  },
+  {
+    name: "মোহাম্মদ মুবিন",
+    role: "সদস্য",
+    image: "/members/member-28.jpeg",
   },
   
 
