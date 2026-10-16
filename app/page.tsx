@@ -733,6 +733,19 @@ const closeMenu = () => setMenuOpen(false);
     </div>
 
   </div>
+  <div>
+              <p className="text-[11px] font-semibold tracking-wider text-[#84998d]">
+                Developed & Maintained by
+              </p>
+
+              <p className="mt-1 font-bold text-[#174a39]">
+                তথ্যপ্রযুক্তি উপকমিটি
+              </p>
+
+              <p className="mt-1 text-xs text-[#71847b]">
+                সূচনা ছাত্র সংগঠন
+              </p>
+            </div>
 
   <div className="footer-bottom">
     <p>© ২০২৬ সূচনা ছাত্র সংগঠন</p>
