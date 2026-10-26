@@ -269,20 +269,11 @@ export default function BanglaUtsob2026() {
       />
     </div>
 
-    <div className="archiveGalleryItem archiveGalleryWide">
-      <Image
-        src="/events/bangla-utsob/2026/gallery-05.jpg"
-        alt="৪র্থ বাংলা উৎসবের মুহূর্ত"
-        fill
-        sizes="(max-width: 700px) 100vw, 60vw"
-      />
-    </div>
-
   </div>
 
 
   <div className="archiveGalleryBottom">
-    <span>০৫টি নির্বাচিত মুহূর্ত</span>
+    <span>নির্বাচিত মুহূর্ত</span>
 
     <a
       href="https://drive.google.com/drive/folders/1KgPHcLCgD7GaGP_v9rRs27oluK6B131J?usp=drive_link"

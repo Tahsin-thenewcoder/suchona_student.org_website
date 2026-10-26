@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+@import "tailwindcss";
+
+body {
+  font-family: 'Anek Bangla', sans-serif;
+}
 * 
 {
   box-sizing: border-box;

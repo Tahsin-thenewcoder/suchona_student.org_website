@@ -144,8 +144,18 @@ const events: GalleryEvent[] = [
     description: "দীর্ঘ বিরতির পর প্রিয় আঙ্গিনায় ফিরে আসা বাংলা উৎসবের আয়োজন।",
     photos: [
       {
-        src: "/gallery/full-view/2023/bangla-utsob-2023-01.jpeg",
-        caption: "বাংলা ভাষা ও সাহিত্য অলিম্পিয়াডে অংশগ্রহণরত শিক্ষার্থীরা",
+        src: "/gallery/full-view/2023/bangla-utsob-2023-01.2.jpeg",
+        caption: "২য় বাংলা উৎসব এ আগত শিক্ষার্থীরা",
+      },
+
+      {
+        src: "/gallery/full-view/2023/bangla-utsob-2023-02.jpeg",
+        caption: "ফলাফল ও পুরস্কার বিতরণী পর্বের প্রস্তুতিতে ব্যস্ত সময় পার করছেন আয়োজকবৃন্দ",
+      },
+
+      {
+        src: "/gallery/full-view/2023/bangla-utsob-2023-03.jpeg",
+        caption: "একটি সুন্দরন আয়োজন শেষে আম্রা-সূচনা পরিবার",
       },
     ]
   },

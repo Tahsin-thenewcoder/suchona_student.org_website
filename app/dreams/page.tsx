@@ -6,7 +6,7 @@ import styles from "./dreams.module.css";
 const dreams = [
   {
     number: "01",
-    title: "সূচনা এডুকেশন অ্যাক্সেলারেশন",
+    title: "সূচনা এডুকেশন অ্যাক্সেলারেশন প্রজেক্ট ",
     english: "Suchona Education Acceleration Project",
     category: "শিক্ষা সহায়তা ও বৃত্তি",
     description:
@@ -76,7 +76,7 @@ export default function DreamsPage() {
 
       <section className={styles.intro}>
         <p className={styles.eyebrow}>আমাদের ভাবনা</p>
-        <h2>স্বপ্ন দেখি, একদিন<br />বাস্তবায়নও করব।</h2>
+        <h2>স্বপ্ন দেখি, একদিন<br />বাস্তবায়নও করব। ইনশাআল্লাহ</h2>
         <p>
           সূচনা শুধু কিছু অনুষ্ঠান আয়োজনের মধ্যে সীমাবদ্ধ থাকতে চায় না।
           শিক্ষার্থীদের পাশে দাঁড়ানো, নতুন কিছু শেখার সুযোগ তৈরি করা
